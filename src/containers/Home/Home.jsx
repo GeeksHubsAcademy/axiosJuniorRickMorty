@@ -1,5 +1,6 @@
 
 import React from "react";
+// import { NavLink, withRouter } from "react-router-dom";
 
 //importo CSS 
 
@@ -59,26 +60,12 @@ class Home extends React.Component {
     }
 
     clickElementoSeleccionado(personaje){
-        console.log(personaje);
+        
+        this.props.history.push('/Characterdetail');
+        localStorage.setItem('datosPersonaje', JSON.stringify(personaje));
     }
 
-    // async clickEliminarCita(cita){
-    //     //llamada a axios para borrar
-
-    //     let variableDelBody = {
-    //          id : cita.id
-    //      }
-    //     try {
-
-    //         const respuesta = await axios.delete('urldelendpointdeborradodelback/', variableDelBody);
-    //     }catch{
-
-    //     }
-
-    //     //comprobamos si la respuesta del backend es afirmativa, y podemos 
-    //     //mostrar un mensaje de borrado exitoso y recargar la página, o 
-    //     //recargar la página directamente.
-    // }
+    
     
     render() {
         return(
