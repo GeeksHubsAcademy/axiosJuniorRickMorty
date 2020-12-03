@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //Importacion de containers & componentes
 
 import Characterdetail from './containers/Characterdetail/Characterdetail';
+import Register from './containers/Register/Register';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/Characterdetail" exact component={Characterdetail} />
+          <Route path="/Register" exact component={Register} />
         </Switch>
       </Router>
     </div>
